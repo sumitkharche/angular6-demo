@@ -17,28 +17,15 @@
           <input id="email" type="text" formControlName="email" class="form-control">
         </div>
       </div>
+      <div class="form-group">
+        <label class=" control-label" for="email">Select Department</label>
+        <select formControlName="department" class="form-control">
+          <option *ngFor="let department of departmentList" value="{{department}}">
+            {{department}}
+          </option>
+        </select>
+      </div>
       <button class="btn btn-primary" type="submit">Save</button>
     </div>
   </div>
 </form>
-
-<table border="1" style="margin-top: 50px">
-  <tr>
-    <th style="padding: 10px">FormGroup</th>
-    <th style="padding: 10px">FormControl(Name)</th>
-  </tr>
-  <tr>
-    <td style="padding: 10px">
-      touched: {{employeeForm.touched}}
-      <br /> dirty: {{employeeForm.dirty}}
-      <br /> valid: {{employeeForm.valid}}
-      <br /> Form Value: {{employeeForm.value | json}}
-    </td>
-    <td style="padding: 10px">
-      touched: {{employeeForm.get('fullName').touched}}
-      <br /> dirty: {{employeeForm.get('fullName').dirty}}
-      <br /> valid: {{employeeForm.get('fullName').valid}}
-      <br /> FullName Value: {{employeeForm.get('fullName').value | json}}
-    </td>
-  </tr>
-</table>

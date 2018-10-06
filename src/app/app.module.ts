@@ -7,19 +7,24 @@ import { CreateEmployeeComponent } from './create-employee.component';
 import { ListEmployeesComponent } from './list-employees.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ToasterModule, ToasterService } from 'angular2-toaster';
+import { EmployeeChartComponent } from './employee-chart/employee-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateEmployeeComponent,
-    ListEmployeesComponent
+    ListEmployeesComponent,
+    EmployeeChartComponent
   ],
   imports: [
     BrowserModule,
+    NgxChartsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ToasterModule.forRoot()
+    ToasterModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

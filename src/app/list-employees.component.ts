@@ -9,11 +9,14 @@ import { DataService } from './data.service';
 export class ListEmployeesComponent implements OnInit {
 
   employeeList: any;
+  departments: any;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.departments = this.dataService.getDepartments();
     this.employeeList = this.dataService.getEmployees();
+
   }
 
 }
