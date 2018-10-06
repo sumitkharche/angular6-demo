@@ -1,0 +1,10 @@
+<div class="row" style="margin-top: 25px">
+  <div class="col-sm-4" *ngFor="let emp of employeeList">
+    <div class="card" style="margin-top: 15px">
+      <div class="card-body">
+        <h5 class="card-title">{{emp.fullName}}</h5>
+        <p class="card-text">{{emp.email}}</p>
+      </div>
+    </div>
+  </div>
+</div>
